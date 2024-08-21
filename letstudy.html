@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemBridge: Hóa Học Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/img/fonts/fontawesome-free-6.6.0/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="./assets/css/img/NCKH_transparent-.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/img/fonts/themify-icons-font/themify-icons/themify-icons.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="header-2">
+            <ul id="nav">
+                <li>
+                    <a href="http://127.0.0.1:5500/listlesson.html" class="back-btn">
+                        <i class="back-icon fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li>
+                    <img src="./assets/css/img/NCKH_transparent-.png" alt="Miêu tả ảnh" class="logo">
+                </li>
+            </ul>
+            <div class="lesson-title">Chủ đề 2: Cấu tạo nguyên tử</div>
+            <div class="toggleNotesBtn">
+                <a href="javascript:void(0);" class="toggleNotesIcon"><i class="fa-solid fa-list"></i></a>
+            </div>
+        </div>
+    
+        <div class="container">
+            <div class="grid__column-10S">
+                <div class="scorm-content" id="scormContent">
+                    <iframe id="myIframe" src="./assets/css/img/SCORM BÀI HỌC/2.1. Các loại hạt cấu tạo nên nguyên tử (oke)/res/index.html" class="scorm-iframe"></iframe>
+                </div>
+                <div class="lesson-name">
+                    <span class="lesson-name-item">2.1. Các loại hạt cấu tạo nên nguyên tử</span>
+                </div>
+            </div>
+            <div class="grid__column-25">
+                <div class="notes" id="notesSection">
+                    <button id="showNoteInputBtn">Nhập ghi chú</button>
+                    <textarea class="note-input" id="noteInput" placeholder="Nhập ghi chú tại đây..." style="display: none;"></textarea>
+                    <button id="saveNoteBtn" style="display: none;">Lưu ghi chú</button>
+                    <div id="notesList" class="notes-list"></div>
+                </div>
+            </div>
+        </div>        
+    
+        <footer class="footer-2">
+            <button class="nav-btn prev-btn">
+                <i class="fa-solid fa-arrow-left"></i> Bài trước
+            </button>
+            <button class="nav-btn next-btn">
+                Bài tiếp theo <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </footer>
+    </div>
+       
+</body>
+  <!--phần note -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const showNoteInputBtn = document.getElementById('showNoteInputBtn');
+    const noteInput = document.getElementById('noteInput');
+    const saveNoteBtn = document.getElementById('saveNoteBtn');
+    const notesList = document.getElementById('notesList');
+
+    // Tải ghi chú từ localStorage và hiển thị chúng
+    function loadNotes() {
+        const notes = localStorage.getItem('notes');
+        if (notes) {
+            notesList.innerHTML = notes;
+        }
+    }
+
+    // Lưu ghi chú vào localStorage và thêm vào danh sách ghi chú
+    function saveNote() {
+        const noteText = noteInput.value;
+        if (noteText.trim()) {
+            const newNote = `
+                <p>
+                    ${noteText}
+                    <button class="delete-btn">Xóa</button>
+                </p>`;
+            let existingNotes = localStorage.getItem('notes') || '';
+            existingNotes += newNote;
+            localStorage.setItem('notes', existingNotes);
+
+            // Cập nhật danh sách ghi chú trên trang
+            notesList.innerHTML = existingNotes;
+
+            noteInput.value = '';
+            adjustHeight(); // Đặt lại chiều cao của ô input
+        }
+    }
+
+    // Xóa ghi chú khi nhấn nút xóa
+    function deleteNote(event) {
+        if (event.target.classList.contains('delete-btn')) {
+            const noteElement = event.target.parentElement;
+            let notes = localStorage.getItem('notes');
+            notes = notes.replace(noteElement.outerHTML, '');
+            localStorage.setItem('notes', notes);
+
+            // Cập nhật danh sách ghi chú trên trang
+            notesList.innerHTML = notes;
+        }
+    }
+
+    // Tự động điều chỉnh chiều cao của ô input khi nội dung thay đổi
+    function adjustHeight() {
+        noteInput.style.height = 'auto'; // Đặt lại chiều cao để tự điều chỉnh
+        noteInput.style.height = noteInput.scrollHeight + 'px'; // Đặt chiều cao mới dựa trên nội dung
+    }
+
+    // Xử lý sự kiện khi nhấn nút hiện ô nhập ghi chú
+    showNoteInputBtn.addEventListener('click', function() {
+        noteInput.style.display = 'block';
+        saveNoteBtn.style.display = 'block';
+        showNoteInputBtn.style.display = 'none'; // Tuỳ chọn: Ẩn nút sau khi hiện ô nhập
+    });
+
+    // Xử lý sự kiện khi nhấn nút lưu ghi chú
+    saveNoteBtn.addEventListener('click', saveNote);
+
+    // Xử lý sự kiện khi nhấn phím Enter để lưu ghi chú
+    noteInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' && !event.shiftKey) { // Nếu nhấn Enter mà không giữ Shift
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của Enter (thêm dòng mới)
+            saveNote(); // Lưu ghi chú
+        }
+    });
+
+    // Điều chỉnh chiều cao của ô input khi nhập nội dung
+    noteInput.addEventListener('input', adjustHeight);
+
+    // Xử lý sự kiện xóa ghi chú
+    notesList.addEventListener('click', deleteNote);
+
+    // Tải ghi chú khi trang được tải
+    loadNotes();
+});
+</script>
+  <!--kết thúc phần note-->
+
+  <!--phần nút bấm đóng mở danh sách bài học-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleNotesBtn = document.querySelector('.toggleNotesBtn');
+    const container = document.querySelector('.container');
+    
+    // Tạo phần tử list-Class và thêm vào container
+    const listClassElement = document.createElement('div');
+    listClassElement.className = 'list-Class';
+    listClassElement.innerHTML = `
+        <h2>Danh sách bài học</h2>
+        <ul>
+            <li><a href="http://127.0.0.1:5500/letstudy.html">2.1. Các loại hạt cấu tạo nên nguyên tử</a></li>
+            <li><a href="#">2.2. Kích thước và khối lượng nguyên tử</a></li>
+            <li><a href="#">2.3. Điện tích hạt nhân và số khối</a></li>
+            <li><a href="#">3.1. Nguyên tố hóa học và kí hiệu nguyên tử</a></li>
+            <li><a href="#">3.2. Đồng vị</a></li>
+            <li><a href="#">3.3. Nguyên tử khối</a></li>
+            <li><a href="#">4.1. Chuyển động của electron trong nguyên tử</a></li>
+            <li><a href="#">4.2. Lớp và phân lớp electron</a></li>
+            <li><a href="#">4.3. Cấu hình electron của nguyên tử</a></li>
+            <li><a href="#">4.4. Cấu hình electron của nguyên tử (tt)</a></li>
+        </ul>
+    `;
+    container.appendChild(listClassElement);
+    
+    // Xử lý sự kiện khi nhấn nút toggleNotesBtn
+    toggleNotesBtn.addEventListener('click', function() {
+        container.classList.toggle('show-list');
+    });
+});
+</script>
+ <!--kết thúc danh sách bài học-->
+
+ 
+
+</html>

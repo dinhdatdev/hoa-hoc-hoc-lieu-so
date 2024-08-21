@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemBridge: Hóa Học Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/img/fonts/fontawesome-free-6.6.0/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="./assets/css/img/NCKH_transparent-.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/img/fonts/themify-icons-font/themify-icons/themify-icons.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <div id="header">
+            <ul id="nav">
+                <li>
+                    <span class="home-filter__label">WWW.School</span>
+                </li>
+                <li>
+                    <a href="#">Giới thiệu</a>
+                </li>
+                <li>
+                    <a href="#lesson">Bài học</a>
+                </li>
+                <li>
+                    <a href="#experiment">Thí nghiệm</a>
+                </li>
+                <li>
+                    <a href="#">Tài liệu<i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav1">
+                        <li><a href="https://ptable.com/?lang=vi#Properties">Bảng tuần hoàn các nguyên tố hóa học</a></li>
+                        <li><a href="">Bảng tính tan</a></li>
+                        <li><a href="">Bảng hằng số điện ly</a></li>
+                        <li><a href="">Bảng nhiệt độ sôi và nhiệt độ nóng chảy</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Ôn tập</a>
+                </li>
+                <li>
+                    <a href="#">Kiểm tra<i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="">Hóa Học 10</a></li>
+                        <li><a href="">Hóa Học 11</a></li>
+                        <li><a href="">Hóa Học 12</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+                            <!-- menu tablet/ipad -->
+            
+            <div id="tablet-menu" class="tablet-menu-btn">
+                <i class="tablet-icon ti-menu"></i>
+            </div>
+            
+                             <!-- ô tìm kiếm -->
+
+            <div class="search-btn">
+                <i class="search-icon ti-bell"></i>
+                <div class="notifications">
+                    <ul>
+                        <li>Chưa có thông báo nào</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="app__container">
+            <div class="grid">
+                <div class="grid__row app__content">
+                    <div class="grid__column-1">
+                        <div class="category">
+                            <a href="http://127.0.0.1:5500/index.html" class="home-button">
+                                <i class="home-icon fa-solid fa-house"></i>
+                            </a>
+                            <div class="home-text">Trang chủ</div>
+                        </div>
+                        <div class="category">
+                            <a href="" class="home-button">
+                                <i class="home-icon2 category-heading-icon fa-solid fa-book"></i>
+                            </a> 
+                            <div class="home-text2">Tiện ích</div>        
+                        </div>     
+                    </div>                  
+                    <div class="grid__column-11">
+                        <div class="pic">
+                           <img src="./assets/css/img/307.png" alt="loingo">
+                        </div>
+
+                    </div>
+                    <div class="grid__column-10">
+                        
+                            <!-- Bài học theo chủ đề -->
+                             
+                        <div id="lesson" class="home-product">
+                         <div class="home-filter__BH">
+                             <span class="home-filter__label-BH">Bài học theo chủ đề</span>
+                         </div>
+                         <div class="grid__row">
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://cdn.thuvienphapluat.vn/uploads/tintuc/2024/02/16/chuong-trinh-giao-duc-pho-thong-hoa-hoc.jpeg);"></div>
+                                     <h4 class="home-product-item__name">1. Nhập môn hóa học</h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 1" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">1</span>
+                                             </i>
+                                         </span>   
+                                     </div>
+                                 </div>                              
+                             </div>
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://vnmedia2.monkeyuni.net/upload/web/storage_web/05-04-2022_17:41:55_nguyen-tu-la-gi.jpg);"></div>
+                                     <h4 class="home-product-item__name">2. Cấu tạo nguyên tử</h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="./listlesson.html" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 7" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">7</span>
+                                             </i>
+                                         </span>    
+                                     </div>
+                                 </div>                              
+                             </div>
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://vnmedia2.monkeyuni.net/upload/web/storage_web/08-04-2022_08:15:14_nguyen-to-hoa-hoc-la-gi-0.jpg);"></div>
+                                     <h4 class="home-product-item__name">3. Bảng tuần hoàn các nguyên tố hóa học</h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 10" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">10</span>
+                                             </i>
+                                         </span>   
+                                     </div>
+                                 </div>                              
+                             </div>
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://blog.marathon.edu.vn/wp-content/uploads/2022/03/hat-nhan-nguyen-tu-la-gi.jpg);"></div>
+                                     <h4 class="home-product-item__name">4. Liên kết hóa học </h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 9" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">9</span>
+                                             </i>
+                                         </span>    
+                                     </div>
+                                 </div>                              
+                             </div>
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://static.fqa.vn/fqa/sgk/ag_la_gi_5_fd9c399346.jpg);"></div>
+                                     <h4 class="home-product-item__name">5. Phản ứng oxi hóa - khử </h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 9" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">9</span>
+                                             </i>
+                                         </span>    
+                                     </div>
+                                 </div>                              
+                             </div> 
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://www.shutterstock.com/shutterstock/videos/1090669297/thumb/4.jpg?ip=x480);"></div>
+                                     <h4 class="home-product-item__name">6. Năng lượng hóa học</h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 5" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">5</span>
+                                             </i>
+                                         </span>    
+                                     </div>
+                                 </div>                              
+                             </div>
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://giasutatdat.edu.vn/uploads/images/top-nhung-cau-hoi-thuong-gap-cua-hoc-sinh-lop-8-ve-mon-hoa-hoc.jpg);"></div>
+                                     <h4 class="home-product-item__name">7. Tốc độ phản ứng hóa học </h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 12" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">12</span>
+                                             </i>
+                                         </span>   
+                                     </div>
+                                 </div>                              
+                             </div>
+                         </div>
+                        </div>
+    
+                              <!--Thí nghiệm-->
+                        <div id="experiment" class="home-product">
+                         <div class="home-filter__BH">
+                             <span class="home-filter__label-BH">Thí nghiệm theo chủ đề bài học</span>
+                         </div>
+                         <div class="grid__row">
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://img.lovepik.com/png/20231007/Experiment-ware-education-theme-illustration-chemical-test-utensils_115513_wh1200.png);"></div>
+                                     <h4 class="home-product-item__name">Thí nghiệm 1</h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 1" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">1</span>
+                                             </i>
+                                         </span>    
+                                     </div>
+                                 </div>                              
+                             </div>
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://png.pngtree.com/png-clipart/20190920/original/pngtree-chemical-experiment-equipment-illustration-png-image_4630656.jpg);"></div>
+                                     <h4 class="home-product-item__name">Thí nghiệm 2</h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 1" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">1</span>
+                                             </i>
+                                         </span>   
+                                     </div>
+                                 </div>                              
+                             </div>
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://png.pngtree.com/element_our/20200610/ourmid/pngtree-anti-pneumonia-medical-chemical-laboratory-supplies-image_2246122.jpg);"></div>
+                                     <h4 class="home-product-item__name">Thí nghiệm 3</h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 1" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">1</span>
+                                             </i>
+                                         </span>    
+                                     </div>
+                                 </div>                              
+                             </div>
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://png.pngtree.com/png-clipart/20190509/ourmid/pngtree-blue-medical-test-tube-liquid-png-image_929501.jpg);"></div>
+                                     <h4 class="home-product-item__name">Thí nghiệm 4</h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 1" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">1</span>
+                                             </i>
+                                         </span>    
+                                     </div>
+                                 </div>                              
+                             </div>
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://png.pngtree.com/element_our/20190531/ourmid/pngtree-chemical-experiment-supplies-illustration-image_1294081.jpg);"></div>
+                                     <h4 class="home-product-item__name">Thí nghiệm 5</h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 1" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">1</span>
+                                             </i>
+                                         </span>  
+                                     </div>
+                                 </div>                              
+                             </div> 
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://www.vietjack.com/tai-lieu-mon-hoa/images/cong-thuc-tinh-nguyen-tu-khoi-trung-binh-cua-cac-nguyen-to-hoa-hoc-ctqt10-46720.png);"></div>
+                                     <h4 class="home-product-item__name">Thí nghiệm 6</h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 1" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">1</span>
+                                             </i>
+                                         </span>  
+                                     </div>
+                                 </div>                              
+                             </div>
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://png.pngtree.com/png-clipart/20190601/ourlarge/pngtree-chemical-experimental-tools-png-image_1114961.jpg);"></div>
+                                     <h4 class="home-product-item__name">Thí nghiệm 7</h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 1" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">1</span>
+                                             </i>
+                                         </span>     
+                                     </div>
+                                 </div>                              
+                             </div>
+                             <div class="grid__column-2-4">
+                                 <div class="home-product-item">
+                                     <div class="home-product-item__img" style="background-image: url(https://png.pngtree.com/png-clipart/20230929/original/pngtree-three-laboratory-flasks-in-a-line-vector-png-image_13013758.png);"></div>
+                                     <h4 class="home-product-item__name">Thí nghiệm 8</h4>
+                                     <div class="home-product-item__action">
+                                         <button class="home-product-item__start">
+                                             <a href="" class="home-product-item__start-btn">Bắt đầu</a>
+                                         </button>   
+                                         <span title="Số lượng bài giảng: 1" class="home-product-item__like">
+                                             <i class="home-product-icon fa-solid fa-circle-play">
+                                                 <span class="home-product-span">1</span>
+                                             </i>
+                                         </span>    
+                                     </div>
+                                 </div>                              
+                             </div>    
+                         </div>            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2-5">
+                        <h3 class="footer__heading">Giới thiệu về nhóm</h3>
+                    </div>
+                    <div class="grid__column-2-5">
+                        <h3 class="footer__heading">Theo dõi chúng tôi</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fa-brands fa-facebook"></i>Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fa-brands fa-instagram"></i>Instagram
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fa-solid fa-envelope"></i>Mail
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-5">
+                        <h3 class="footer__heading">Liên kết nhanh</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Danh mục</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Điều khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-5">
+                        <h3 class="footer__heading">Hỗ trợ</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hỗ trợ</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Đóng góp</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-5">
+                        <h3 class="footer__heading">Update</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Bản Beta 1.8</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="grid">
+                    <p class="footer__text">@ 2024 - Bản quyền thuộc về Nhóm SV NCKH LL&PPDH Hoá học</p>
+                </div>
+            </div>
+        </footer>      
+    </div>
+
+    <script>
+        var header = document.getElementById('header');
+        var tabletMenu = document.getElementById('tablet-menu');
+        var headerHeight = header.clientHeight;
+
+        // đóng mở tablet menu //
+        tabletMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        // tự động đóng khi chọn menu //
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function(event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
+            }
+        }
+    </script> 
+    
+</body>
+
+</html>
